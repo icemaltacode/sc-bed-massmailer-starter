@@ -1,0 +1,73 @@
+<div class="d-flex justify-content-center">
+   <h1>Send Message</h1>
+</div>
+<div class="d-flex justify-content-center">
+   <p class="lead">Send your messages here. Remember to include an unsubscribe link!
+   </p>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                Message
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger" role="alert" id="missingAlert" style="display: none">    
+                </div>
+                <select id="listSelect" class="form-select form-select-lg mb-3" aria-label="Choose recipient list">
+                    <option selected>Choose a list</option>
+                </select>
+                <div class="card" style="margin-bottom: 20px;">
+                    <div class="card-body" id="listAddresses">
+                        Choose a list to see addresses.
+                    </div>
+                </div>
+                <select id="messageSelect" class="form-select form-select-lg mb-3" aria-label="Choose message list">
+                    <option selected>Choose a message</option>
+                </select>
+                <div class="card" style="margin-bottom: 20px;">
+                    <div class="card-body" id="messageContent">
+                        Choose a message to see content.
+                    </div>
+                </div>
+                <button id="sendButton" type="button" class="btn btn-primary">Send It</button>
+                <div class="alert alert-warning" role="alert" id="successAlert" style="display: none; margin-top: 10px;">    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#section 'scripts'}}
+<script>
+    let validList = false;
+    let validMessage = false;
+
+    document.addEventListener('DOMContentLoaded', fetchLists, false);
+    document.addEventListener('DOMContentLoaded', fetchMessages, false);
+    document.getElementById('listSelect').addEventListener('change', fetchListAddresses, false);
+    document.getElementById('messageSelect').addEventListener('change', fetchMessageContent, false);
+    document.getElementById('sendButton').addEventListener('click', sendMessage, false);
+    
+
+    function fetchLists() {
+        // TODO 
+    }
+
+    function fetchListAddresses() {
+        // TODO 
+    }
+
+    function fetchMessages() {
+        // TODO 
+    }
+
+    function fetchMessageContent() {
+        // TODO 
+    }
+
+    function sendMessage() {
+        // TODO 
+    }
+</script>
+{{/section}}
